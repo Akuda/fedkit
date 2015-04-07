@@ -5,9 +5,11 @@
 // Vendor Files
 @import "vendor/normalize";
 @import "vendor/mq";
+@import "vendor/singularitygs";
 
 // Partials
 @import "partials/base";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/main";
+@import "partials/grid-test";

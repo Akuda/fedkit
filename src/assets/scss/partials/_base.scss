@@ -22,6 +22,12 @@ object {
   max-width: 100%;
 }
 
+// Responsive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 ::selection {
   background: #a8d1ff;
   text-shadow: none;

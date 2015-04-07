@@ -1,0 +1,27 @@
+.grid-test {
+  @include add-grid(4);
+  @include add-gutter(1/3);
+  @include add-gutter-style('split');
+  @include sgs-change('debug', true);
+  @include background-grid($color: blue);
+  @include cf();
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @include mq($from: tablet) {
+    @include add-grid(12);
+    @include background-grid($color: green);
+  }
+
+  &__copy {
+    @include mq($from: tablet) {
+     @include grid-span(9, 4);
+    }
+  }
+
+  &__sidebar {
+    @include mq($from: tablet) {
+     @include grid-span(3, 1);
+    }
+  }
+}
