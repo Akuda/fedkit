@@ -14,14 +14,10 @@ module.exports = function(grunt) {
     site: grunt.file.readYAML('_config.yml'),
 
     // Clean files
-    // ### NEEDS FINISHING ###
     clean: {
-      dev: [
+      dist: [
         '<%= site.dist %>',
       ],
-      prd: [
-        '<%= site.dist %>'
-      ]
     },
 
     // Assemble - Build HTML
@@ -222,7 +218,7 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dev', [
-    'clean',
+    'clean:dist',
     'assemble',
     'sass:dev',
     'autoprefixer:dev',
@@ -234,7 +230,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('prd', [
-    'clean',
+    'clean:dist',
     'assemble',
     'sass:prd',
     'autoprefixer:prd',
@@ -245,5 +241,5 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', 'dev');
-  grunt.registerTask('reset', ['clean']);
+  grunt.registerTask('reset', ['clean:dist']);
 };

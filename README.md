@@ -23,6 +23,7 @@ Install Node 0.10 or 0.12, then run 'npm install'
 
 * 'grunt' - Build website, watch for changes & start server
 * 'grunt prd' - Build minified website
+* 'grunt reset' - Delete website and all generated files
 
 ## BrowserSync
 
