@@ -13,3 +13,12 @@ This project is undocumented and not really meant for public consumption but fee
 The 'Proper' FedKit is coming in the future with documentation and much more jazzy stuff.
 
 NOTE: Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
+
+## Install
+
+Install Node 0.10 or 0.12, then run 'npm install'
+
+## How to use
+
+* 'grunt' - Build website, watch for changes & start server
+* 'grunt prd' - Build minified website
