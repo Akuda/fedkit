@@ -2,7 +2,6 @@
   "name": "FEDkit-legacy",
   "version": "0.0.1",
   "author": "Phil Lennon <enquiry@akuda.co.uk>",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/PJL101/fedkit-legacy.git"
