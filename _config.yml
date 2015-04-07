@@ -1,0 +1,16 @@
+# File Locations
+# =============================================
+
+# Build paths
+src:            src
+srcAssets:      <%= site.src %>/assets
+dist:           _dist
+distAssets:     <%= site.dist %>/assets
+
+# Assemble
+templates:      <%= site.src %>/templates
+data:           <%= site.templates %>/data/*.{json,yml}
+partials:       <%= site.templates %>/partials/*.hbs
+layouts:        <%= site.templates %>/layouts
+layout:         main.hbs
+pages:          <%= site.templates %>/pages
