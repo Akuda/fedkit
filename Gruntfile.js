@@ -188,50 +188,33 @@ module.exports = function(grunt) {
       js: {
         files: ['<%= site.srcAssets %>/js/**/*.js'],
         tasks: ['jshint', 'uglify:dev'],
-        options: {
-          livereload: true,
-          files: ['<%= site.distAssets %>/js/**/*']
-        }
       },
       scss: {
         files:['<%= site.srcAssets %>/scss/**/*.scss'],
         tasks:['sass:dev', 'autoprefixer'],
-        options: {
-          livereload: true,
-          files: ['<%= site.distAssets %>/css/**/*']
-        }
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
         tasks: ['imagemin'],
-        options: {
-          livereload: true,
-          files: ['<%= site.distAssets %>/img/**/*']
-        }
       },
       assemble: {
         files: ['<%= site.templates %>/**/*', '_config.yml'],
         tasks: ['assemble'],
-        options: {
-          livereload: true,
-          files: ['<%= site.dist %>/**/*.html']
-        }
-      },
-      options: {
-        interrupt: true
       }
     },
 
-    // Connect server
-    connect: {
-      server: {
+    browserSync: {
+      dev: {
+        bsFiles: {
+            src : [
+              '<%= site.distAssets %>/css/*.css',
+              '<%= site.distAssets %>/js/*.js',
+              '<%= site.dist %>/*.html'
+            ]
+        },
         options: {
-          hostname: '*',
-          port: 8000,
-          base: '<%= site.dist %>',
-          livereload: true,
-          useAvailablePort: true,
-          open: true
+            watchTask: true,
+            server: '<%= site.dist %>'
         }
       }
     }
@@ -246,7 +229,7 @@ module.exports = function(grunt) {
     'jshint',
     'uglify:dev',
     'copy:extras',
-    'connect',
+    'browserSync',
     'watch'
   ]);
 
