@@ -11,8 +11,6 @@ This is based off an unreleased workflow I used to use. However, it has been str
 
 This project is undocumented and not really meant for public consumption but feel free to use it if it is useful. It is currently missing some of the basic things like bower, HTML minification and alike but it is pretty fast at what it does.
 
-The 'Proper' FedKit is coming in the future with documentation and much more jazzy stuff.
-
 NOTE: Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
 
 ## Install

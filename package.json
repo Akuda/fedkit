@@ -1,6 +1,7 @@
 {
   "name": "FEDkit-legacy",
-  "version": "0.0.2",
+  "description": "A quick Grunt, Libsass & Assemble Front End Development workflow",
+  "version": "0.1.0",
   "author": "Phil Lennon <enquiry@akuda.co.uk>",
   "repository": {
     "type": "git",
