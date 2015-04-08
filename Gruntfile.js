@@ -235,6 +235,7 @@ module.exports = function(grunt) {
             src : [
               '<%= site.distAssets %>/css/*.css',
               '<%= site.distAssets %>/js/*.js',
+              '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
               '<%= site.dist %>/*.html'
             ]
         },
@@ -255,6 +256,7 @@ module.exports = function(grunt) {
     'autoprefixer:dev',
     'jshint',
     'uglify:dev',
+    'imagemin',
     'copy:extras',
     'browserSync',
     'watch'
@@ -269,6 +271,7 @@ module.exports = function(grunt) {
     'cssmin',
     'jshint',
     'uglify:prd',
+    'imagemin',
     'copy:extras'
   ]);
 
