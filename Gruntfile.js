@@ -64,6 +64,36 @@ module.exports = function(grunt) {
       }
     },
 
+    // Change to rem units
+    px_to_rem: {
+      dev: {
+        files: [{
+          expand: true,
+          flatten: true,
+          src: '<%= site.distAssets %>/css/*.css',
+          dest: '<%= site.distAssets %>/css/'
+        }],
+        options: {
+          fallback: true,
+          fallback_existing_rem: true,
+          map: true
+        }
+      },
+      prd: {
+        files: [{
+          expand: true,
+          flatten: true,
+          src: '<%= site.distAssets %>/css/*.css',
+          dest: '<%= site.distAssets %>/css/'
+        }],
+        options: {
+          fallback: true,
+          fallback_existing_rem: true,
+          map: false
+        }
+      },
+    },
+
     // Autoprefix CSS
     autoprefixer: {
       dev: {
@@ -221,6 +251,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'assemble',
     'sass:dev',
+    'px_to_rem:dev',
     'autoprefixer:dev',
     'jshint',
     'uglify:dev',
@@ -233,6 +264,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'assemble',
     'sass:prd',
+    'px_to_rem:prd',
     'autoprefixer:prd',
     'cssmin',
     'jshint',

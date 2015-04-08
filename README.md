@@ -9,9 +9,11 @@ This is based off an unreleased workflow I used to use. However, it has been str
 * Singularity.gs 1.6.2
 * BrowserSync 2.x
 
-This project is undocumented and not really meant for public consumption but feel free to use it if it is useful. It is currently missing some of the basic things like bower, HTML minification and alike but it is pretty fast at what it does.
+This project is undocumented and not really meant for public consumption but feel free to use it if it is useful. It is currently missing some of the basic things like bower, HTML minification and similar, but it is pretty fast at what it does.
 
 NOTE: Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
+
+NOTE: IE8 support is in progress.
 
 ## Install
 
