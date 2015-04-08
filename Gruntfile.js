@@ -190,6 +190,7 @@ module.exports = function(grunt) {
     imagemin: {
       dynamic: {
         options: {
+
         },
         files: [{
           expand: true,
@@ -216,8 +217,8 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'uglify:dev'],
       },
       scss: {
-        files:['<%= site.srcAssets %>/scss/**/*.scss'],
-        tasks:['sass:dev', 'autoprefixer'],
+        files: ['<%= site.srcAssets %>/scss/**/*.scss'],
+        tasks: ['sass:dev', 'px_to_rem:dev', 'autoprefixer:dev'],
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
@@ -232,7 +233,7 @@ module.exports = function(grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-            src : [
+            src: [
               '<%= site.distAssets %>/css/*.css',
               '<%= site.distAssets %>/js/*.js',
               '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
