@@ -76,7 +76,8 @@ module.exports = function(grunt) {
         options: {
           fallback: true,
           fallback_existing_rem: true,
-          map: true
+          map: true,
+          ignore: ['content']
         }
       },
       prd: {
