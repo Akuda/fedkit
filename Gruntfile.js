@@ -28,10 +28,10 @@ module.exports = function(grunt) {
         partials: '<%= site.partials %>',
         layoutdir: '<%= site.layouts %>',
         layout: '<%= site.layout %>',
-        data: '<%= site.data %>/*.{json,yml}',
+        data: '<%= site.data %>',
       },
       site: {
-        src: '<%= site.pages %>/*.hbs',
+        src: '<%= site.pages %>',
         dest: '<%= site.dist %>/'
       }
     },
