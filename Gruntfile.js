@@ -168,10 +168,7 @@ module.exports = function(grunt) {
         options: {
           mangle: true,
           beautify: false,
-          preserveComments: 'some',
-          compress: {
-            drop_console: true
-          },
+          preserveComments: 'some'
         },
         files: {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/*.js'],
