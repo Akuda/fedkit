@@ -1,19 +1,21 @@
-# FEDkit-legacy
+# FEDkit-mini
 
-This is based off an unreleased workflow I used to use. However, it has been streamlined & updated with some modern technologies:
+This is a basic but well tested frontend development workflow. The workflow contains:
 
-* Grunt 0.4.x
-* Assemble 0.4.x
+* Grunt 0.4
+* Assemble 0.4
 * Libsass 3.1
-* SASS-MQ 3.1.2
-* Singularity.gs 1.6.2
-* BrowserSync 2.x
+* Autoprefixer 3
+* CSS PX to REM
+* SASS-MQ 3
+* Singularity.gs 1.6
+* BrowserSync 2
+* Imagemin
+* JSHint
 
-This project is undocumented and not really meant for public consumption but feel free to use it if it is useful. It is currently missing some of the basic things like bower, HTML minification and similar, but it is pretty fast at what it does.
+This project is currently undocumented. There are some deliberate omissions in the workflow such as bower, HTML minification and similar, but the workflow is pretty fast at what it does and is stable.
 
-NOTE: Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
-
-NOTE: IE8 support is in progress.
+Coming in the future is a more feature packed workflow.
 
 ## Install
 
@@ -28,3 +30,9 @@ Install Node 0.10 or 0.12, then run 'npm install'
 ## BrowserSync
 
 With BrowserSync, you can view the website on multiple devices and actions are sent to all of them at the same time. See the UI link after running the grunt task for more information.
+
+## Known Issues
+
+* NOTE: IE8 support is in progress.
+* NOTE: Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
+

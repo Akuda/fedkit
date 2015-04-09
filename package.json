@@ -1,11 +1,11 @@
 {
-  "name": "FEDkit-legacy",
+  "name": "FEDkit-mini",
   "description": "A quick Grunt, Libsass & Assemble Front End Development workflow",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "author": "Phil Lennon <enquiry@akuda.co.uk>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PJL101/fedkit-legacy.git"
+    "url": "https://github.com/PJL101/fedkit-mini.git"
   },
   "devDependencies": {
     "assemble": "^0.4.42",
