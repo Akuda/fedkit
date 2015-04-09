@@ -1,7 +1,7 @@
 {
   "name": "FEDkit-legacy",
   "description": "A quick Grunt, Libsass & Assemble Front End Development workflow",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "Phil Lennon <enquiry@akuda.co.uk>",
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-contrib-uglify": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-notify": "^0.4.1",
     "grunt-px-to-rem": "^0.4.0",
     "grunt-sass": "^0.18.1",
     "load-grunt-tasks": "^3.1.0",

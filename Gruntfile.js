@@ -252,16 +252,16 @@ module.exports = function(grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-            src : [
-              '<%= site.distAssets %>/css/*.css',
-              '<%= site.distAssets %>/js/*.js',
-              '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
-              '<%= site.dist %>/*.html'
-            ]
+          src: [
+            '<%= site.distAssets %>/css/*.css',
+            '<%= site.distAssets %>/js/*.js',
+            '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
+            '<%= site.dist %>/*.html'
+          ]
         },
         options: {
-            watchTask: true,
-            server: '<%= site.dist %>'
+          server: '<%= site.dist %>',
+          watchTask: true
         }
       }
     }
