@@ -136,12 +136,12 @@ module.exports = function(grunt) {
       }
     },
 
-    // jsHint custom JS
+    // JSHint modules
     jshint: {
       files: ['<%= site.srcAssets %>/js/modules/*.js']
     },
 
-    // Uglify JS
+    // Uglify Javascript
     uglify: {
       dev: {
         options: {
@@ -246,6 +246,7 @@ module.exports = function(grunt) {
       },
     },
 
+    // Start server & watch
     browserSync: {
       dev: {
         bsFiles: {
