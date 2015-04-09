@@ -22,7 +22,7 @@
     "grunt-notify": "^0.4.1",
     "grunt-px-to-rem": "^0.4.0",
     "grunt-sass": "^0.18.1",
-    "load-grunt-tasks": "^3.1.0",
+    "jit-grunt": "^0.9.1",
     "time-grunt": "^1.1.0"
   }
 }

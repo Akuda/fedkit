@@ -2,11 +2,11 @@
 
 module.exports = function(grunt) {
 
-  // Time the grunt task
+  // Time grunt tasks
   require('time-grunt')(grunt);
 
-  // Load all grunt tasks & assemble
-  require('load-grunt-tasks')(grunt, {pattern: ['grunt-*', 'assemble']});
+  // Load all grunt tasks
+  require('jit-grunt')(grunt);
 
   grunt.initConfig({
     // Read needed files
