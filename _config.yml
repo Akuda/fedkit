@@ -10,7 +10,7 @@ distAssets:     <%= site.dist %>/assets
 # Assemble
 templates:      <%= site.src %>/templates
 data:           <%= site.templates %>/data/*.{json,yml}
+helpers:        <%= site.templates %>/helpers/helper-*.js
 partials:       <%= site.templates %>/partials/{,*/}*.hbs
-layouts:        <%= site.templates %>/layouts
-layout:         default.hbs
+layouts:        <%= site.templates %>/layouts/{,*/}*.hbs
 pages:          <%= site.templates %>/pages/{,*/}*.hbs

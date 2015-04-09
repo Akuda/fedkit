@@ -17,14 +17,19 @@
   </head>
   <body>
     <header class="site-header" role="banner">
-        {{> header }}
+      {{>header}}
     </header>
     <main class="main">
-        {{> body }}
+      {{#block "body"}}
+        {{>body}}
+      {{/block}}
     </main>
     <footer class="site-footer" role="contentinfo">
-        {{> footer }}
+      {{>footer}}
     </footer>
+
+    {{#block "gutter"}}{{/block}}
+
     <script src="{{assets}}/js/site.js"></script>
   </body>
 </html>

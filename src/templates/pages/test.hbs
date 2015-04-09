@@ -1,8 +1,12 @@
 ---
 title: Test page
 description: Test description
-layout: default.hbs
 ---
-<div class="test">
-  <h1>Test content page</h1>
-</div>
+
+{{#extend "master"}}
+  {{#content "body"}}
+    <div class="test">
+      <h1>Test content page</h1>
+    </div>
+  {{/content}}
+{{/extend}}
