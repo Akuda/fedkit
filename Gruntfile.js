@@ -191,7 +191,6 @@ module.exports = function(grunt) {
     imagemin: {
       dynamic: {
         options: {
-
         },
         files: [{
           expand: true,
@@ -204,11 +203,22 @@ module.exports = function(grunt) {
 
     // Copy files
     copy: {
-      extras: {
-        files: [
-          {expand: true, cwd: '<%= site.src %>/files/', src: ['**'], dest: '<%= site.dist %>/'},
-        ]
-      }
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: '<%= site.srcAssets %>/fonts/',
+          src: ['**/*'],
+          dest: '<%= site.distAssets %>/fonts/'
+        }]
+      },
+      files: {
+        files: [{
+          expand: true,
+          cwd: '<%= site.src %>/files/',
+          src: ['**/*'],
+          dest: '<%= site.dist %>/'
+        }]
+      },
     },
 
     // Watch for changes
@@ -218,8 +228,8 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'uglify:dev'],
       },
       scss: {
-        files: ['<%= site.srcAssets %>/scss/**/*.scss'],
-        tasks: ['sass:dev', 'px_to_rem:dev', 'autoprefixer:dev'],
+        files:['<%= site.srcAssets %>/scss/**/*.scss'],
+        tasks:['sass:dev', 'px_to_rem:dev', 'autoprefixer:dev'],
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
@@ -228,13 +238,21 @@ module.exports = function(grunt) {
       assemble: {
         files: ['<%= site.templates %>/**/*', '_config.yml'],
         tasks: ['assemble'],
-      }
+      },
+      fonts: {
+        files: ['<%= site.srcAssets %>/fonts/**/*'],
+        tasks: ['copy:fonts'],
+      },
+      files: {
+        files: ['<%= site.src %>/files/**/*'],
+        tasks: ['copy:files'],
+      },
     },
 
     browserSync: {
       dev: {
         bsFiles: {
-            src: [
+            src : [
               '<%= site.distAssets %>/css/*.css',
               '<%= site.distAssets %>/js/*.js',
               '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
@@ -259,7 +277,7 @@ module.exports = function(grunt) {
     'jshint',
     'uglify:dev',
     'imagemin',
-    'copy:extras',
+    'copy',
     'browserSync',
     'watch'
   ]);
@@ -274,7 +292,7 @@ module.exports = function(grunt) {
     'jshint',
     'uglify:prd',
     'imagemin',
-    'copy:extras'
+    'copy'
   ]);
 
   grunt.registerTask('default', 'dev');
