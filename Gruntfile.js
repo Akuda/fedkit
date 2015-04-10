@@ -148,7 +148,6 @@ module.exports = function(grunt) {
           mangle: false,
           compress: false,
           preserveComments: 'all',
-          beautify: true,
           sourceMap: true,
           sourceMapIncludeSources: true
         },
@@ -167,7 +166,6 @@ module.exports = function(grunt) {
       prd: {
         options: {
           mangle: true,
-          beautify: false,
           preserveComments: 'some'
         },
         files: {
