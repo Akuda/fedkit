@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/PJL101/fedkit-mini.git"
   },
+  "engines": {
+    "node": ">= 0.10"
+  },
   "devDependencies": {
     "assemble": "^0.4.42",
     "grunt": "^0.4.5",

@@ -12,6 +12,7 @@ Thumbs.db
 # Boilerplate #
 ######################
 *node_modules/
+npm-debug.log
 *_dist/
 
 # Development #
