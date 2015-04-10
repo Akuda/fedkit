@@ -1,9 +1,10 @@
 language: node_js
 
-# test on two node.js versions: 0.10 and 0.12
+# test on relevant node versions
 node_js:
   - "0.10"
   - "0.12"
+  - "iojs"
 
 before_script:
   - npm install -g grunt-cli
