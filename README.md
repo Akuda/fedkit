@@ -33,6 +33,7 @@ With BrowserSync, you can view the website on multiple devices and actions are s
 
 ## Known Issues
 
-* NOTE: IE8 support is in progress.
-* NOTE: Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
+* IE8 support is in progress.
+* Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
+* No documentation
 
