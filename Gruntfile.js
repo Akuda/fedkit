@@ -124,7 +124,7 @@ module.exports = function(grunt) {
 
     // Minify CSS
     cssmin: {
-      target: {
+      prd: {
         files: [{
           expand: true,
           cwd: '<%= site.distAssets %>/css',
