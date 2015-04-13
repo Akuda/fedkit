@@ -157,6 +157,7 @@ module.exports = function(grunt) {
           mangle: false,
           compress: false,
           preserveComments: 'all',
+          beautify: false,
           sourceMap: true,
           sourceMapIncludeSources: true
         },
@@ -175,7 +176,11 @@ module.exports = function(grunt) {
       prd: {
         options: {
           mangle: true,
-          preserveComments: 'some'
+          compress: true,
+          beautify: false,
+          preserveComments: 'some',
+          sourceMap: false,
+          sourceMapIncludeSources: false
         },
         files: {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/*.js'],
