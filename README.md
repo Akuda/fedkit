@@ -22,13 +22,13 @@ Coming in the future is a more extensive, opinionated and feature packed workflo
 
 ## Install
 
-Install Node 0.10 or 0.12, then run 'npm install'
+Install Node 0.10 or 0.12, then run 'npm install'.
 
 ## How to use
 
-* 'grunt' - Build website, watch for changes & start server
-* 'grunt prd' - Build minified website
-* 'grunt reset' - Delete website and all generated files
+* 'grunt' - Build website, watch for changes & start server,
+* 'grunt prd' - Build minified website,
+* 'grunt reset' - Delete website and all generated files.
 
 ## BrowserSync
 
@@ -36,7 +36,8 @@ With BrowserSync, you can view the website on multiple devices and actions are s
 
 ## Known Issues
 
-* IE8 support is in progress.
-* Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway.
-* No documentation
+* Libsass 3.1 currently doesn't support sourcemaps properly and is disabled,
+* IE8 support is untested,
+* Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway,
+* No full documentation.
 
