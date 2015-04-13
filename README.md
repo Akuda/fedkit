@@ -18,7 +18,7 @@ This is a basic but well tested frontend development workflow. The workflow cont
 
 This project is currently undocumented. There are some deliberate omissions in the workflow such as bower, HTML minification and similar, but the workflow is pretty fast at what it does and is stable.
 
-Coming in the future is a more feature packed workflow.
+Coming in the future is a more extensive, opinionated and feature packed workflow 'fedkit'.
 
 ## Install
 
