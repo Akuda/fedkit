@@ -47,7 +47,8 @@ module.exports = function(grunt) {
           ext: '.css'
         }],
         options: {
-          sourcemap: true,
+          sourcemap: false,
+          sourceComments: true
         }
       },
       prd: {
@@ -76,7 +77,7 @@ module.exports = function(grunt) {
         options: {
           fallback: true,
           fallback_existing_rem: true,
-          map: true,
+          map: false,
           ignore: ['content']
         }
       },
@@ -100,7 +101,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           browsers: ['last 2 versions', 'Firefox ESR', 'ie 8', 'ie 9'],
-          map: true,
+          map: false,
         },
         files: [{
           expand: true,
