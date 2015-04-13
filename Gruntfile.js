@@ -100,8 +100,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       dev: {
         options: {
-          browsers: ['last 2 versions', 'Firefox ESR', 'ie 8', 'ie 9'],
-          map: false,
+          map: false
         },
         files: [{
           expand: true,
@@ -112,8 +111,7 @@ module.exports = function(grunt) {
       },
       prd: {
         options: {
-          browsers: ['last 2 versions', 'Firefox ESR', 'ie 8', 'ie 9'],
-          map: false,
+          map: false
         },
         files: [{
           expand: true,
