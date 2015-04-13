@@ -1,3 +1,3 @@
 // Load required modules
 example.init();
-console.log(example.publicVar);
+console.log('in main file: ' + example.publicVar);

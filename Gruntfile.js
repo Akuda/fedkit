@@ -1,6 +1,6 @@
-'use strict';
-
 module.exports = function(grunt) {
+
+  'use strict';
 
   // Time grunt tasks
   require('time-grunt')(grunt);
@@ -138,7 +138,16 @@ module.exports = function(grunt) {
 
     // JSHint modules
     jshint: {
-      files: ['<%= site.srcAssets %>/js/modules/*.js']
+      options: {
+        jshintrc: '.jshintrc',
+        reporter: require('jshint-stylish')
+      },
+      all: [
+        '<%= site.gruntfile %>',
+        '<%= site.gruntfile %>/js/globals.js',
+        '<%= site.gruntfile %>/js/main.js',
+        '<%= site.srcAssets %>/js/modules/**/*.js'
+      ]
     },
 
     // Uglify Javascript
