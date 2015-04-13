@@ -25,6 +25,7 @@
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.1.0",
     "grunt-notify": "^0.4.1",
     "grunt-px-to-rem": "^0.4.0",
     "grunt-sass": "^0.18.1",

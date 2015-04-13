@@ -234,7 +234,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: ['<%= site.srcAssets %>/js/**/*.js'],
-        tasks: ['jshint', 'uglify:dev'],
+        tasks: ['newer:jshint', 'newer:uglify:dev'],
       },
       scss: {
         files:['<%= site.srcAssets %>/scss/**/*.scss'],
@@ -242,7 +242,7 @@ module.exports = function(grunt) {
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
-        tasks: ['imagemin'],
+        tasks: ['newer:imagemin'],
       },
       assemble: {
         files: ['<%= site.templates %>/**/*', '_config.yml'],
@@ -250,11 +250,11 @@ module.exports = function(grunt) {
       },
       fonts: {
         files: ['<%= site.srcAssets %>/fonts/**/*'],
-        tasks: ['copy:fonts'],
+        tasks: ['newer:copy:fonts'],
       },
       files: {
         files: ['<%= site.src %>/files/**/*'],
-        tasks: ['copy:files'],
+        tasks: ['newer:copy:files'],
       },
     },
 
