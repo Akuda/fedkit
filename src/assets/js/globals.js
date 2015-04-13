@@ -1,5 +1,8 @@
 // Avoid console errors in browsers that don't support console.log()
 (function() {
+
+  'use strict';
+
   var method;
   var noop = function () {};
   var methods = [
