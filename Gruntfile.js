@@ -234,7 +234,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: ['<%= site.srcAssets %>/js/**/*.js'],
-        tasks: ['newer:jshint', 'newer:uglify:dev'],
+        tasks: ['jshint', 'uglify:dev'],
       },
       scss: {
         files:['<%= site.srcAssets %>/scss/**/*.scss'],
