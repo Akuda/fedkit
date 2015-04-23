@@ -6,10 +6,9 @@
 * Source: [github.com/Akuda/fedkit](http://github.com/Akuda/fedkit)
 * Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
-
 -
 
-This is a fast, stable, and well tested frontend development workflow, containing:
+FEDkit is a fast, stable, and well tested frontend development workflow, containing:
 
 * Grunt 0.4
 * Assemble 0.4
