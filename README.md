@@ -3,9 +3,11 @@
 [![Build Status](https://travis-ci.org/Akuda/fedkit.svg?branch=master)](https://travis-ci.org/Akuda/fedkit)
 [![Dependency Status](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df)
 
-* Source: [github.com/Akuda/fedkit](http://github.com/toddmotto/fireshell)
+* Source: [github.com/Akuda/fedkit](http://github.com/Akuda/fedkit)
 * Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
+
+---
 
 This is a fast, stable, and well tested frontend development workflow, containing:
 
