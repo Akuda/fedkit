@@ -7,7 +7,7 @@
 * Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 
----
+-
 
 This is a fast, stable, and well tested frontend development workflow, containing:
 
