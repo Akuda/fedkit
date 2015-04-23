@@ -65,38 +65,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Change to rem units
-    px_to_rem: {
-      dev: {
-        files: [{
-          expand: true,
-          flatten: true,
-          src: '<%= site.distAssets %>/css/*.css',
-          dest: '<%= site.distAssets %>/css/'
-        }],
-        options: {
-          fallback: true,
-          fallback_existing_rem: true,
-          map: false,
-          ignore: ['content']
-        }
-      },
-      prd: {
-        files: [{
-          expand: true,
-          flatten: true,
-          src: '<%= site.distAssets %>/css/*.css',
-          dest: '<%= site.distAssets %>/css/'
-        }],
-        options: {
-          fallback: true,
-          fallback_existing_rem: true,
-          map: false,
-          ignore: ['content']
-        }
-      },
-    },
-
     // Autoprefix CSS
     autoprefixer: {
       dev: {
@@ -134,6 +102,38 @@ module.exports = function(grunt) {
           ext: '.css'
         }]
       }
+    },
+
+    // Change to rem units
+    px_to_rem: {
+      dev: {
+        files: [{
+          expand: true,
+          flatten: true,
+          src: '<%= site.distAssets %>/css/*.css',
+          dest: '<%= site.distAssets %>/css/'
+        }],
+        options: {
+          fallback: true,
+          fallback_existing_rem: true,
+          map: false,
+          ignore: ['content']
+        }
+      },
+      prd: {
+        files: [{
+          expand: true,
+          flatten: true,
+          src: '<%= site.distAssets %>/css/*.css',
+          dest: '<%= site.distAssets %>/css/'
+        }],
+        options: {
+          fallback: true,
+          fallback_existing_rem: true,
+          map: false,
+          ignore: ['content']
+        }
+      },
     },
 
     // JSHint modules
@@ -296,9 +296,9 @@ module.exports = function(grunt) {
     'clean:dist',
     'assemble',
     'sass:prd',
-    'px_to_rem:prd',
     'autoprefixer:prd',
     'cssmin',
+    'px_to_rem:prd',
     'jshint',
     'uglify:prd',
     'imagemin',

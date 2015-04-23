@@ -1,15 +1,15 @@
-# FEDkit
+# fedkit
 
 [![Build Status](https://travis-ci.org/Akuda/fedkit.svg?branch=master)](https://travis-ci.org/Akuda/fedkit)
 [![Dependency Status](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df)
 
-* Source: [github.com/Akuda/fedkit](http://github.com/Akuda/fedkit)
+* Source: [github.com/akuda/fedkit](http://github.com/akuda/fedkit)
 * Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 
 -
 
-FEDkit is a fast, stable, and well tested frontend development workflow, containing:
+fedkit is a fast, stable, and well tested frontend development workflow, containing:
 
 * Grunt 0.4
 * Assemble 0.4
@@ -22,14 +22,14 @@ FEDkit is a fast, stable, and well tested frontend development workflow, contain
 * JSHint
 * BrowserSync 2.6
 
-There are some omissions by design such as bower, HTML minification and similar, because this workflow is designed to be as fast and easy to use as possible. Use it as a base and tailor it to your specific needs.
+Because this workflow is designed to be as fast and easy to use as possible, there are some feature omissions by design such as bower integration. Use it as a base and tailor to your specific needs.
 
-Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/Akuda/fedkit/issues) for more information about future enchancements and changes.
+Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/akuda/fedkit/issues) for more information about future enchancements and changes.
 
 ## First time install
 
-* Either, download the latest stable release from [GitHub](https://github.com/Akuda/fedkit/releases).
-* Or, clone the git repo — 'git clone https://github.com/Akuda/fedkit.git'.
+* Either, download the latest stable release from [GitHub](https://github.com/akuda/fedkit/releases).
+* Or, clone the git repo — 'git clone https://github.com/akuda/fedkit.git'.
 
 Once this has been done:
 
@@ -51,7 +51,7 @@ With BrowserSync, you can view the website on multiple devices and actions are s
 
 ## Known Issues
 
-* Libsass 3.1 currently doesn't support sourcemaps properly and is disabled,
+* Libsass 3.1 doesn't support sourcemaps properly and they are currently disabled. This has been confirmed fixed in 3.2 and will be updated when released,
 * Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway,
 * No full documentation.
 
