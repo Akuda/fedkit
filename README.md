@@ -3,7 +3,11 @@
 [![Build Status](https://travis-ci.org/Akuda/fedkit.svg?branch=master)](https://travis-ci.org/Akuda/fedkit)
 [![Dependency Status](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df)
 
-This is a basic, but well tested frontend development workflow, containing:
+* Source: [github.com/Akuda/fedkit](http://github.com/toddmotto/fireshell)
+* Author: [Phil Lennon](http://akuda.co.uk)
+* Twitter: [@PJL101](http://twitter.com/pjl101)
+
+This is a fast, stable, and well tested frontend development workflow, containing:
 
 * Grunt 0.4
 * Assemble 0.4
@@ -16,9 +20,9 @@ This is a basic, but well tested frontend development workflow, containing:
 * JSHint
 * BrowserSync 2.6
 
-There are some omissions by design such as bower, HTML minification and similar, because the workflow is designed to be as fast and easy to use as possible. Use this is a base and tailor it to your specific needs.
+There are some omissions by design such as bower, HTML minification and similar, because this workflow is designed to be as fast and easy to use as possible. Use it as a base and tailor it to your specific needs.
 
-This project is currently undocumented but this is being worked on.
+Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/Akuda/fedkit/issues) for more information about future enchancements and changes.
 
 ## First time install
 
