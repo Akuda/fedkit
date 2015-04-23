@@ -1,7 +1,7 @@
-# FEDkit-mini
+# FEDkit
 
-[![Build Status](https://travis-ci.org/PJL101/fedkit-mini.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-mini)
-[![Dependency Status](https://www.versioneye.com/user/projects/5527f2fa2ced4f5816000c2f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5527f2fa2ced4f5816000c2f)
+[![Build Status](https://travis-ci.org/Akuda/fedkit.svg?branch=master)](https://travis-ci.org/Akuda/fedkit)
+[![Dependency Status](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df)
 
 This is a basic but well tested frontend development workflow. The workflow contains:
 

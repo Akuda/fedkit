@@ -47,8 +47,8 @@ module.exports = function(grunt) {
           ext: '.css'
         }],
         options: {
-          sourcemap: false,
-          sourceComments: true
+          sourceComments: true,
+          sourceMap: false
         }
       },
       prd: {
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
           ext: '.css'
         }],
         options: {
-          sourcemap: false,
+          sourceMap: false,
         }
       }
     },
