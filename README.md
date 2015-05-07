@@ -33,7 +33,7 @@ Comments, sugggestions & pull requests are always welcome. See the [issues list]
 
 Once this has been done:
 
-* Install Node 0.10, 0.12 or io.js,
+* Install Node 0.12 or io.js 2.0 (Node 0.10.x is not supported),
 * Navigate to the workflow folder in command line terminal,
 * run 'npm install -g grunt-cli',
 * run 'npm install',
