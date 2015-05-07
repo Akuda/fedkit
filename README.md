@@ -31,21 +31,20 @@ Comments, sugggestions & pull requests are always welcome. See the [issues list]
 ## First time install
 
 * Either, download the latest stable release from [GitHub](https://github.com/akuda/fedkit/releases).
-* Or, clone the git repo — 'git clone https://github.com/akuda/fedkit.git'.
+* Or, clone the git repo — `git clone https://github.com/akuda/fedkit.git`.
 
 Once this has been done:
 
 * Install Node 0.12 or io.js 2.0 (Node 0.10.x is not supported),
 * Navigate to the workflow folder in command line terminal,
-* run 'npm install -g grunt-cli',
-* run 'npm install',
-* run 'grunt'.
+* run `npm install -g grunt-cli`,
+* run `npm install`,
+* run `grunt`.
 
 ## How to use
-
-* 'grunt' - Build website, watch for changes & start server,
-* 'grunt prd' - Build minified website,
-* 'grunt reset' - Delete generated website.
+* `grunt` - Build website, watch for changes & start server,
+* `grunt prd` - Build minified website,
+* `grunt reset` - Delete generated website.
 
 ## BrowserSync
 
@@ -54,5 +53,6 @@ With BrowserSync, you can view the website on multiple devices and actions are s
 ## Known Issues
 
 * Documentation is in progress,
-* Grid and site examples need to be improved.
+* Grid and site examples need to be improved,
+* No Windows testing.
 
