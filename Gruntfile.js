@@ -47,8 +47,10 @@ module.exports = function(grunt) {
           ext: '.css'
         }],
         options: {
-          sourceComments: true,
-          sourceMap: false
+          sourceComments: false,
+          sourceMap: true,
+          sourceMapContents: true,
+          sourceMapEmbed: true
         }
       },
       prd: {
@@ -60,7 +62,10 @@ module.exports = function(grunt) {
           ext: '.css'
         }],
         options: {
+          sourceComments: false,
           sourceMap: false,
+          sourceMapContents: false,
+          sourceMapEmbed: false
         }
       }
     },
@@ -69,7 +74,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       dev: {
         options: {
-          map: false
+          map: true
         },
         files: [{
           expand: true,
@@ -116,7 +121,7 @@ module.exports = function(grunt) {
         options: {
           fallback: true,
           fallback_existing_rem: true,
-          map: false,
+          map: true,
           ignore: ['content']
         }
       },
