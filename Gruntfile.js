@@ -205,12 +205,29 @@ module.exports = function(grunt) {
     imagemin: {
       dynamic: {
         options: {
+
         },
         files: [{
           expand: true,
           cwd: '<%= site.srcAssets %>/img/',
           src: ['**/*.{png,jpg,gif}'],
           dest: '<%= site.distAssets %>/img/'
+        }]
+      }
+    },
+
+    // HTML minification
+    htmlmin: {
+      prd: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.dist %>',
+          src: ['**/*.html'],
+          dest: '<%= site.dist %>',
         }]
       }
     },
@@ -307,6 +324,7 @@ module.exports = function(grunt) {
     'jshint',
     'uglify:prd',
     'imagemin',
+    'htmlmin:prd',
     'copy'
   ]);
 

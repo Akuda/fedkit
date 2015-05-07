@@ -13,14 +13,16 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 
 * Grunt 0.4
 * Assemble 0.4
-* Libsass 3.1
-* Singularity.gs 1.6
+* Libsass 3.2
+* Susy 2.2
 * SASS-MQ 3
 * CSS PX to REM
 * Autoprefixer 5
 * Imagemin
 * JSHint
+* HTMLmin
 * BrowserSync 2.6
+* Responsive IE8 support
 
 Because this workflow is designed to be as fast and easy to use as possible, there are some feature omissions by design such as bower integration. Use it as a base and tailor to your specific needs.
 
@@ -51,7 +53,6 @@ With BrowserSync, you can view the website on multiple devices and actions are s
 
 ## Known Issues
 
-* Libsass 3.1 doesn't support sourcemaps properly and they are currently disabled. This has been confirmed fixed in 3.2 and will be updated when released,
-* Singularity.gs warns about Breakpoint being missing on compile but it's not a problem. SASS-MQ is far better anyway,
-* No full documentation.
+* Documentation is in progress,
+* Grid and site examples need to be improved.
 
