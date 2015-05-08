@@ -1,13 +1,6 @@
-$susy: (
-  columns: 12,
-  container: 60em,
-  gutters: 0.25,
-  global-box-sizing: border-box,
-  debug: (image: show-columns)
-);
-
 .grid-test {
   @include container();
+  @include show-grid(show overlay);
 
   &__copy {
     @include mq($from: tablet) {
