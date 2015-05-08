@@ -35,13 +35,66 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 // -----------------------------
 
 $base-font-size: 16px;
+$site-container: 61.25em; // 980px
+$site-gutter: 0.25;
+$mobile-column: 4;
+$tablet-column: 12;
 
-// Default Grid options
+// Default Grid Options
 // -----------------------------
 
-$susy: (
-  columns: 12,
-  container: 60em,
-  gutters: 0.25,
+$grid-mobile: (
+  columns: $mobile-column,
+  gutters: $site-gutter,
   global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: blue,
+    output: overlay,
+    toggle: top left,
+  ),
 );
+
+$grid-tablet: (
+  columns: $mobile-column,
+  gutters: $site-gutter,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: blue,
+    output: overlay,
+    toggle: top left,
+  ),
+  container: $site-container,
+);
+
+/* For reference, the susy defaults are:
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 4,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+*/

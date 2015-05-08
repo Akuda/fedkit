@@ -1,7 +1,14 @@
-.grid-test {
-  @include container();
-  @include show-grid(show overlay);
+.container {
+  @include container($grid-mobile);
+  //@include show-grid($grid-mobile);
 
+  @include mq($from: tablet) {
+    @include container($grid-tablet);
+    //@include show-grid($grid-tablet);
+  }
+}
+
+.grid-test {
   &__copy {
     @include mq($from: tablet) {
       @include span(9 of 12 last);
