@@ -56,7 +56,7 @@ $grid-mobile: (
 );
 
 $grid-tablet: (
-  columns: $mobile-column,
+  columns: $tablet-column,
   gutters: $site-gutter,
   global-box-sizing: border-box,
   debug: (
