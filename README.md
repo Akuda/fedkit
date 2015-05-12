@@ -23,6 +23,7 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * HTMLmin
 * BrowserSync 2.6
 * Responsive IE8 support
+* All dependences use NPM only
 
 Because this workflow is designed to be as fast and easy to use as possible, there are some feature omissions by design such as bower integration. Use it as a base and tailor to your specific needs.
 
@@ -35,7 +36,7 @@ Comments, sugggestions & pull requests are always welcome. See the [issues list]
 
 Once this has been done:
 
-* Install Node 0.12 or io.js 2.0 (Node 0.10.x is not supported),
+* Install Node 0.12 or io.js 2.0 (Node 0.10.x is not supported but may work),
 * Navigate to the workflow folder in command line terminal,
 * run `npm install -g grunt-cli`,
 * run `npm install`,
