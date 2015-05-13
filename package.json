@@ -2,6 +2,7 @@
   "name": "fedkit",
   "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass and Assemble",
   "version": "0.4.0-alpha.1",
+  "private": "true",
   "author": "Phil Lennon <enquiry@akuda.co.uk>",
   "repository": {
     "type": "git",
