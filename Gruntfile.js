@@ -20,6 +20,7 @@ module.exports = function(grunt) {
       ],
       bower: [
         'bower_components',
+        'bower_filtered',
       ]
     },
 
@@ -244,6 +245,14 @@ module.exports = function(grunt) {
 
     // Copy files
     copy: {
+      bower: {
+        files: [{
+          expand: true,
+          cwd: 'bower_filtered',
+          src: ['**/*'],
+          dest: '<%= site.distAssets %>'
+        }]
+      },
       fonts: {
         files: [{
           expand: true,
@@ -313,6 +322,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', [
     'clean:dist',
     'shell:bower',
+    'newer:copy:bower',
     'assemble',
     'sass:dev',
     'px_to_rem:dev',
@@ -320,7 +330,8 @@ module.exports = function(grunt) {
     'jshint',
     'uglify:dev',
     'imagemin',
-    'copy',
+    'copy:fonts',
+    'copy:files',
     'browserSync',
     'watch'
   ]);
@@ -328,6 +339,7 @@ module.exports = function(grunt) {
   grunt.registerTask('prd', [
     'clean:dist',
     'shell:bower',
+    'newer:copy:bower',
     'assemble',
     'sass:prd',
     'autoprefixer:prd',
@@ -337,7 +349,8 @@ module.exports = function(grunt) {
     'uglify:prd',
     'imagemin',
     'htmlmin:prd',
-    'copy'
+    'copy:fonts',
+    'copy:files',
   ]);
 
   grunt.registerTask('default', 'dev');

@@ -24,7 +24,7 @@
     "normalize-scss": "~3.0.3"
   },
   "install": {
-    "base": "src/assets",
+    "base": "bower_filtered",
     "path": {
       "js": "js/vendor/{name}",
       "scss": "scss/vendor/{name}",
