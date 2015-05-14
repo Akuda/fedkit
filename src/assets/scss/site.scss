@@ -4,9 +4,9 @@
 @import "modules/mixins";
 
 // Vendor files
-@import "../../../node_modules/normalize-scss-vanilla/normalize";
-@import "../../../node_modules/sass-mq/mq";
-@import "../../../node_modules/susy/sass/susy";
+@import "vendor/bower/normalize-scss/normalize";
+@import "vendor/bower/sass-mq/mq";
+@import "vendor/bower/susy/susy";
 
 // Partials
 @import "partials/base";

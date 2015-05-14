@@ -18,6 +18,47 @@ module.exports = function(grunt) {
       dist: [
         '<%= site.dist %>',
       ],
+      bower: [
+        'bower_components',
+        'bower_filtered',
+        '<%= site.srcAssets %>/scss/vendor/bower',
+        '<%= site.srcAssets %>/js/vendor/bower',
+      ]
+    },
+
+    // Copy files
+    copy: {
+      bower: {
+        files: [{
+          expand: true,
+          cwd: 'bower_filtered',
+          src: ['**/*'],
+          dest: '<%= site.srcAssets %>'
+        }]
+      },
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: '<%= site.srcAssets %>/fonts/',
+          src: ['**/*'],
+          dest: '<%= site.distAssets %>/fonts/'
+        }]
+      },
+      files: {
+        files: [{
+          expand: true,
+          cwd: '<%= site.src %>/files/',
+          src: ['**/*'],
+          dest: '<%= site.dist %>/'
+        }]
+      },
+    },
+
+    // Run shell tasks
+    shell: {
+      bower: {
+        command: 'bower-installer'
+      }
     },
 
     // Assemble - Build HTML
@@ -167,13 +208,13 @@ module.exports = function(grunt) {
           sourceMapIncludeSources: true
         },
         files: {
-          '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/*.js'],
-          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/*.js'],
+          '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
+          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
             '<%= site.srcAssets %>/js/globals.js',
-            '<%= site.srcAssets %>/js/vendor/*.js',
-            '<%= site.srcAssets %>/js/plugins/*.js',
-            '<%= site.srcAssets %>/js/modules/*.js',
+            '<%= site.srcAssets %>/js/vendor/**/*.js',
+            '<%= site.srcAssets %>/js/plugins/**/*.js',
+            '<%= site.srcAssets %>/js/modules/**/*.js',
             '<%= site.srcAssets %>/js/main.js',
           ]
         }
@@ -188,13 +229,13 @@ module.exports = function(grunt) {
           sourceMapIncludeSources: false
         },
         files: {
-          '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/*.js'],
-          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/*.js'],
+          '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
+          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
             '<%= site.srcAssets %>/js/globals.js',
-            '<%= site.srcAssets %>/js/vendor/*.js',
-            '<%= site.srcAssets %>/js/plugins/*.js',
-            '<%= site.srcAssets %>/js/modules/*.js',
+            '<%= site.srcAssets %>/js/vendor/**/*.js',
+            '<%= site.srcAssets %>/js/plugins/**/*.js',
+            '<%= site.srcAssets %>/js/modules/**/*.js',
             '<%= site.srcAssets %>/js/main.js',
           ]
         }
@@ -230,26 +271,6 @@ module.exports = function(grunt) {
           dest: '<%= site.dist %>',
         }]
       }
-    },
-
-    // Copy files
-    copy: {
-      fonts: {
-        files: [{
-          expand: true,
-          cwd: '<%= site.srcAssets %>/fonts/',
-          src: ['**/*'],
-          dest: '<%= site.distAssets %>/fonts/'
-        }]
-      },
-      files: {
-        files: [{
-          expand: true,
-          cwd: '<%= site.src %>/files/',
-          src: ['**/*'],
-          dest: '<%= site.dist %>/'
-        }]
-      },
     },
 
     // Watch for changes
@@ -302,6 +323,8 @@ module.exports = function(grunt) {
   // Tasks
   grunt.registerTask('dev', [
     'clean:dist',
+    'shell:bower',
+    'newer:copy:bower',
     'assemble',
     'sass:dev',
     'px_to_rem:dev',
@@ -309,13 +332,16 @@ module.exports = function(grunt) {
     'jshint',
     'uglify:dev',
     'imagemin',
-    'copy',
+    'copy:fonts',
+    'copy:files',
     'browserSync',
     'watch'
   ]);
 
   grunt.registerTask('prd', [
     'clean:dist',
+    'shell:bower',
+    'newer:copy:bower',
     'assemble',
     'sass:prd',
     'autoprefixer:prd',
@@ -325,9 +351,10 @@ module.exports = function(grunt) {
     'uglify:prd',
     'imagemin',
     'htmlmin:prd',
-    'copy'
+    'copy:fonts',
+    'copy:files',
   ]);
 
   grunt.registerTask('default', 'dev');
-  grunt.registerTask('reset', ['clean:dist']);
+  grunt.registerTask('reset', ['clean']);
 };
