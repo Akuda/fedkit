@@ -1,8 +1,10 @@
 {
   "name": "fedkit",
   "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass and Assemble",
-  "version": "0.3.0",
+  "version": "0.4.0",
+  "private": "true",
   "author": "Phil Lennon <enquiry@akuda.co.uk>",
+  "homepage": "https://github.com/akuda/fedkit",
   "repository": {
     "type": "git",
     "url": "https://github.com/akuda/fedkit.git"
@@ -14,8 +16,7 @@
     "node": ">= 0.12"
   },
   "scripts": {
-    "test": "grunt prd",
-    "install": "napa"
+    "test": "grunt prd"
   },
   "devDependencies": {
     "assemble": "^0.4.42",
@@ -34,17 +35,10 @@
     "grunt-notify": "^0.4.1",
     "grunt-px-to-rem": "^0.4.0",
     "grunt-sass": "^1.0.0",
+    "grunt-shell": "^1.1.2",
     "handlebars-helpers": "^0.5.8",
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.2",
-    "napa": "^1.2.0",
     "time-grunt": "^1.2.0"
-  },
-  "dependencies": {
-    "normalize-scss-vanilla": "^1.0.1",
-    "susy": "^2.2.3"
-  },
-  "napa": {
-    "sass-mq": "sass-mq/sass-mq#v3.1.2"
   }
 }
