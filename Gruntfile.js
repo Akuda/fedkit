@@ -21,6 +21,8 @@ module.exports = function(grunt) {
       bower: [
         'bower_components',
         'bower_filtered',
+        '<%= site.srcAssets %>/scss/vendor/bower',
+        '<%= site.srcAssets %>/js/vendor/bower',
       ]
     },
 
