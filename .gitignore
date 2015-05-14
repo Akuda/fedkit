@@ -23,5 +23,6 @@ npm-debug.log
 
 # Project Specific #
 ######################
-src/assets/scss/vendor/susy
-src/assets/js/vendor/jquery
+*src/assets/scss/vendor/*
+*src/assets/js/vendor/*
+*src/assets/fonts/vendor/*
