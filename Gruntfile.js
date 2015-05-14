@@ -18,6 +18,16 @@ module.exports = function(grunt) {
       dist: [
         '<%= site.dist %>',
       ],
+      bower: [
+        'bower_components',
+      ]
+    },
+
+    // Run shell tasks
+    shell: {
+      bower: {
+        command: 'bower-installer'
+      }
     },
 
     // Assemble - Build HTML
@@ -302,6 +312,7 @@ module.exports = function(grunt) {
   // Tasks
   grunt.registerTask('dev', [
     'clean:dist',
+    'shell:bower',
     'assemble',
     'sass:dev',
     'px_to_rem:dev',
@@ -316,6 +327,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('prd', [
     'clean:dist',
+    'shell:bower',
     'assemble',
     'sass:prd',
     'autoprefixer:prd',
@@ -329,5 +341,5 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', 'dev');
-  grunt.registerTask('reset', ['clean:dist']);
+  grunt.registerTask('reset', ['clean']);
 };
