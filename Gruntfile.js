@@ -24,6 +24,34 @@ module.exports = function(grunt) {
       ]
     },
 
+    // Copy files
+    copy: {
+      bower: {
+        files: [{
+          expand: true,
+          cwd: 'bower_filtered',
+          src: ['**/*'],
+          dest: '<%= site.srcAssets %>'
+        }]
+      },
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: '<%= site.srcAssets %>/fonts/',
+          src: ['**/*'],
+          dest: '<%= site.distAssets %>/fonts/'
+        }]
+      },
+      files: {
+        files: [{
+          expand: true,
+          cwd: '<%= site.src %>/files/',
+          src: ['**/*'],
+          dest: '<%= site.dist %>/'
+        }]
+      },
+    },
+
     // Run shell tasks
     shell: {
       bower: {
@@ -241,34 +269,6 @@ module.exports = function(grunt) {
           dest: '<%= site.dist %>',
         }]
       }
-    },
-
-    // Copy files
-    copy: {
-      bower: {
-        files: [{
-          expand: true,
-          cwd: 'bower_filtered',
-          src: ['**/*'],
-          dest: '<%= site.distAssets %>'
-        }]
-      },
-      fonts: {
-        files: [{
-          expand: true,
-          cwd: '<%= site.srcAssets %>/fonts/',
-          src: ['**/*'],
-          dest: '<%= site.distAssets %>/fonts/'
-        }]
-      },
-      files: {
-        files: [{
-          expand: true,
-          cwd: '<%= site.src %>/files/',
-          src: ['**/*'],
-          dest: '<%= site.dist %>/'
-        }]
-      },
     },
 
     // Watch for changes
