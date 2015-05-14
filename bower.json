@@ -1,0 +1,40 @@
+{
+  "name": "fedkit",
+  "version": "0.4.0-alpha.1",
+  "homepage": "https://github.com/Akuda/fedkit",
+  "authors": [
+    "Phil Lennon <enuiry@akuda.co.uk>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "2.2.3",
+    "jquery": "1"
+  },
+  "install" : {
+    "base":  "src/assets",
+    "path" : {
+      "js": "js/vendor/{name}",
+      "scss": "scss/vendor/{name}",
+      "css": "scss/vendor/{name}",
+      "eot": "fonts/{name}",
+      "svg": "fonts/{name}",
+      "ttf": "fonts/{name}",
+      "woff": "fonts/{name}"
+    },
+    "sources" : {
+      "susy" : [
+        "bower_components/susy/sass/**"
+      ]
+    }
+  }
+}

@@ -37,8 +37,8 @@ Comments, sugggestions & pull requests are always welcome. See the [issues list]
 Once this has been done:
 
 * Install Node 0.12 or io.js 2.0 (Node 0.10.x is not supported but may work),
+* run `npm install grunt-cli -g && npm install bower -g && npm install bower-installer -g`,
 * Navigate to the workflow folder in command line terminal,
-* run `npm install -g grunt-cli`,
 * run `npm install`,
 * run `grunt`.
 

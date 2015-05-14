@@ -9,10 +9,11 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# Boilerplate #
+# fedkit #
 ######################
 *node_modules/
 npm-debug.log
+*bower_components/
 *_dist/
 
 # Development #
@@ -22,3 +23,5 @@ npm-debug.log
 
 # Project Specific #
 ######################
+src/assets/scss/vendor/susy
+src/assets/js/vendor/jquery
