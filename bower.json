@@ -26,13 +26,13 @@
   "install": {
     "base": "bower_filtered",
     "path": {
-      "js": "js/vendor/{name}",
-      "scss": "scss/vendor/{name}",
-      "css": "scss/vendor/{name}",
-      "eot": "fonts/vendor/{name}",
-      "svg": "fonts/vendor/{name}",
-      "ttf": "fonts/vendor/{name}",
-      "woff": "fonts/vendor/{name}"
+      "js": "js/vendor/bower/{name}",
+      "scss": "scss/vendor/bower/{name}",
+      "css": "scss/vendor/bower/{name}",
+      "eot": "fonts/{name}",
+      "svg": "fonts/{name}",
+      "ttf": "fonts/{name}",
+      "woff": "fonts/{name}"
     },
     "sources": {
       "modernizr": "bower_components/modernizr/modernizr.js",
