@@ -18,23 +18,24 @@
   ],
   "dependencies": {
     "susy": "2.2.3",
-    "jquery": "1"
+    "jquery": "1",
+    "modernizr": "~2.8.3",
+    "sass-mq": "~3.1.2"
   },
-  "install" : {
-    "base":  "src/assets",
-    "path" : {
+  "install": {
+    "base": "src/assets",
+    "path": {
       "js": "js/vendor/{name}",
       "scss": "scss/vendor/{name}",
       "css": "scss/vendor/{name}",
-      "eot": "fonts/{name}",
-      "svg": "fonts/{name}",
-      "ttf": "fonts/{name}",
-      "woff": "fonts/{name}"
+      "eot": "fonts/vendor/{name}",
+      "svg": "fonts/vendor/{name}",
+      "ttf": "fonts/vendor/{name}",
+      "woff": "fonts/vendor/{name}"
     },
-    "sources" : {
-      "susy" : [
-        "bower_components/susy/sass/**"
-      ]
+    "sources": {
+      "modernizr": "bower_components/modernizr/modernizr.js",
+      "susy": "bower_components/susy/sass/**"
     }
   }
 }
