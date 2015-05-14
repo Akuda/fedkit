@@ -47,6 +47,10 @@ Once this has been done:
 * `grunt prd` - Build minified website,
 * `grunt reset` - Delete generated website and downloaded bower files.
 
+## Bower
+
+[Bower](http://bower.io) is used to automatically pull in frontend dependences such as jQuery. The workflow takes the relevant files and integrates them into the relevant folders ready for use. Please see bower.json for an example on how this works.
+
 ## BrowserSync
 
 With BrowserSync, you can view the website on multiple devices and actions are sent to all of them at the same time. See the UI link after running the grunt task for more information.
