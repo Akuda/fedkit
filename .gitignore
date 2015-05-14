@@ -24,3 +24,5 @@ npm-debug.log
 
 # Project Specific #
 ######################
+src/assets/scss/vendor/bower
+src/assets/js/vendor/bower
