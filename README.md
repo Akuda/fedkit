@@ -1,7 +1,7 @@
 # fedkit
 
 [![Build Status](https://travis-ci.org/Akuda/fedkit.svg?branch=master)](https://travis-ci.org/Akuda/fedkit)
-[![Dependency Status](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5538dc9d7f43bc3f440004df)
+[![Dependency Status](https://www.versioneye.com/user/projects/5559e9088482f67bef00002d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5559e9088482f67bef00002d)
 
 * Source: [github.com/akuda/fedkit](http://github.com/akuda/fedkit)
 * Author: [Phil Lennon](http://akuda.co.uk)
