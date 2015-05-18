@@ -1,8 +1,8 @@
-// Avoid console errors in browsers that don't support console.log()
-(function() {
+(function( window, $, undefined ) {
 
   'use strict';
 
+  // Avoid console errors in browsers that don't support console.log()
   var method;
   var noop = function () {};
   var methods = [
@@ -22,4 +22,4 @@
         console[method] = noop;
     }
   }
-}());
+})( window, window.jQuery );

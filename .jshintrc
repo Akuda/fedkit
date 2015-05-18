@@ -91,6 +91,7 @@
     "$": true,
     "console": true,
     "document": true,
+    "exampleModule": true,
     "exports": true,
     "jQuery": true,
     "Modernizr": true,

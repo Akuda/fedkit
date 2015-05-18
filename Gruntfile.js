@@ -189,10 +189,10 @@ module.exports = function(grunt) {
         reporter: require('jshint-stylish')
       },
       all: [
-        '<%= site.gruntfile %>',
-        '<%= site.gruntfile %>/js/globals.js',
-        '<%= site.gruntfile %>/js/main.js',
-        '<%= site.srcAssets %>/js/modules/**/*.js'
+        '<%= site.gruntFile %>',
+        '<%= site.srcAssets %>/js/global.js',
+        '<%= site.srcAssets %>/js/modules/**/*.js',
+        '<%= site.srcAssets %>/js/main.js',
       ]
     },
 
@@ -211,7 +211,7 @@ module.exports = function(grunt) {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
           '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
-            '<%= site.srcAssets %>/js/globals.js',
+            '<%= site.srcAssets %>/js/global.js',
             '<%= site.srcAssets %>/js/vendor/**/*.js',
             '<%= site.srcAssets %>/js/plugins/**/*.js',
             '<%= site.srcAssets %>/js/modules/**/*.js',
@@ -232,7 +232,7 @@ module.exports = function(grunt) {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
           '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
-            '<%= site.srcAssets %>/js/globals.js',
+            '<%= site.srcAssets %>/js/global.js',
             '<%= site.srcAssets %>/js/vendor/**/*.js',
             '<%= site.srcAssets %>/js/plugins/**/*.js',
             '<%= site.srcAssets %>/js/modules/**/*.js',

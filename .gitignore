@@ -12,10 +12,10 @@ Thumbs.db
 # fedkit #
 ######################
 *node_modules/
-npm-debug.log
 *bower_components/
 *bower_filtered/
 *_dist/
+npm-debug.log
 
 # Development #
 ######################

@@ -2,7 +2,7 @@
 # =============================================
 
 # Build paths
-gruntfile:      Gruntfile.js
+gruntFile:      Gruntfile.js
 src:            src
 srcAssets:      <%= site.src %>/assets
 dist:           _dist

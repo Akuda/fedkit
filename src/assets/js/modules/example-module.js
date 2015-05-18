@@ -1,4 +1,4 @@
-(function( example, $, undefined ) {
+(function( exampleModule, $, undefined ) {
 
   'use strict';
 
@@ -6,13 +6,13 @@
   var privateVar = "This is a private var";
 
   // Public variable for anyone
-  example.publicVar = "This is a public var";
+  exampleModule.publicVar = "This is a public var";
 
   // Public Method
-  example.init = function() {
+  exampleModule.init = function() {
     console.log('in example module: init/public function');
     console.log('in example module: ' + privateVar);
-    console.log('in example module: ' + example.publicVar);
+    console.log('in example module: ' + exampleModule.publicVar);
 
     privateFunction();
   };
@@ -21,4 +21,4 @@
   function privateFunction() {
     console.log('in example module: private function');
   }
-}( window.example = window.example || {}, jQuery ));
+}( window.exampleModule = window.exampleModule || {}, jQuery ));
