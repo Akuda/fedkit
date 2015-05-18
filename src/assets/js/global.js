@@ -1,4 +1,4 @@
-(function( window, $, undefined ) {
+(function() {
 
   'use strict';
 
@@ -22,4 +22,5 @@
         console[method] = noop;
     }
   }
-})( window, window.jQuery );
+
+}());
