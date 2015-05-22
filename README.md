@@ -25,14 +25,11 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * Responsive IE8 support,
 * All frontend dependences use bower for easy management.
 
-Because this workflow is designed to be as fast and easy to use as possible, there are some feature omissions by design such as bower integration. Use it as a base and tailor to your specific needs.
+Use fedkit as a base and tailor to your specific needs. Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/akuda/fedkit/issues) for more information about future enchancements and changes.
 
-Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/akuda/fedkit/issues) for more information about future enchancements and changes.
+## Install
 
-## First time install
-
-* Either, download the latest stable release from [GitHub](https://github.com/akuda/fedkit/releases).
-* Or, clone the git repo — `git clone https://github.com/akuda/fedkit.git`.
+Either, download the latest stable release from [GitHub](https://github.com/akuda/fedkit/releases) or clone the git repo to get the latest bleeding edge changes — `git clone https://github.com/akuda/fedkit.git`.
 
 Once this has been done:
 
