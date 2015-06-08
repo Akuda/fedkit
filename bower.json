@@ -1,9 +1,9 @@
 {
   "name": "fedkit-assemble",
-  "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass and Assemble",
+  "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass and Assemble.",
   "version": "0.5.0",
   "private": "true",
-  "homepage": "https://github.com/akuda/fedkit-assemble",
+  "homepage": "http://fedkit-assemble.akuda.co.uk",
   "authors": [
     "Phil Lennon <enquiry@akuda.co.uk>"
   ],
