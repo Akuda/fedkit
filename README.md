@@ -1,15 +1,15 @@
-# fedkit
+# fedkit-assemble
 
-[![Build Status](https://travis-ci.org/Akuda/fedkit.svg?branch=master)](https://travis-ci.org/Akuda/fedkit)
+[![Build Status](https://travis-ci.org/Akuda/fedkit-assemble.svg?branch=master)](https://travis-ci.org/Akuda/fedkit-assemble)
 [![Dependency Status](https://www.versioneye.com/user/projects/5559e9088482f67bef00002d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5559e9088482f67bef00002d)
 
-* Source: [github.com/akuda/fedkit](http://github.com/akuda/fedkit)
+* Source: [github.com/akuda/fedkit-assemble](http://github.com/akuda/fedkit-assemble)
 * Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 
 -
 
-fedkit is a fast, stable, and well tested frontend development workflow, containing:
+fedkit-assemble is a fast, stable, and well tested frontend development workflow, containing:
 
 * Grunt 0.4,
 * Assemble 0.4,
@@ -29,7 +29,7 @@ Use fedkit as a base and tailor to your specific needs. Comments, sugggestions &
 
 ## Install
 
-Either, download the latest stable release from [GitHub](https://github.com/akuda/fedkit/releases) or clone the git repo to get the latest bleeding edge changes — `git clone https://github.com/akuda/fedkit.git`.
+Either, download the latest stable release from [GitHub](https://github.com/akuda/fedkit-assemble/releases) or clone the git repository on the master branch — `git clone https://github.com/akuda-assemble/fedkit.git`.
 
 Once this has been done:
 
