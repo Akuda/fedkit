@@ -1,7 +1,7 @@
 # fedkit-assemble
 
 [![Build Status](https://travis-ci.org/Akuda/fedkit-assemble.svg?branch=master)](https://travis-ci.org/Akuda/fedkit-assemble)
-[![Dependency Status](https://www.versioneye.com/user/projects/5559e9088482f67bef00002d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5559e9088482f67bef00002d)
+[![devDependency Status](https://david-dm.org/Akuda/fedkit-assemble/dev-status.svg)](https://david-dm.org/Akuda/fedkit-assemble#info=devDependencies)
 
 * Source: [github.com/akuda/fedkit-assemble](http://github.com/akuda/fedkit-assemble)
 * Author: [Phil Lennon](http://akuda.co.uk)
