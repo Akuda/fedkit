@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/Akuda/fedkit-assemble.svg?branch=master)](https://travis-ci.org/Akuda/fedkit-assemble)
 [![devDependency Status](https://david-dm.org/Akuda/fedkit-assemble/dev-status.svg)](https://david-dm.org/Akuda/fedkit-assemble#info=devDependencies)
 
-* Website: [fedkit-assemble.akuda.co.uk](http://fedkit-assemble.akuda.co.uk)
 * Source: [github.com/akuda/fedkit-assemble](http://github.com/akuda/fedkit-assemble)
 * Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
@@ -58,4 +57,3 @@ With BrowserSync, you can view the website on multiple devices and actions are s
 * Documentation is in progress,
 * Grid and site examples need to be improved,
 * No Windows testing.
-
