@@ -1,9 +1,9 @@
 # fedkit-assemble
 
-[![Build Status](https://travis-ci.org/Akuda/fedkit-assemble.svg?branch=master)](https://travis-ci.org/Akuda/fedkit-assemble)
-[![devDependency Status](https://david-dm.org/Akuda/fedkit-assemble/dev-status.svg)](https://david-dm.org/Akuda/fedkit-assemble#info=devDependencies)
+[![Build Status](https://travis-ci.org/PJL101/fedkit-assemble.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-assemble)
+[![devDependency Status](https://david-dm.org/PJL101/fedkit-assemble/dev-status.svg)](https://david-dm.org/PJL101/fedkit-assemble#info=devDependencies)
 
-* Source: [github.com/akuda/fedkit-assemble](http://github.com/akuda/fedkit-assemble)
+* Source: [github.com/PJL101/fedkit-assemble](http://github.com/PJL101/fedkit-assemble)
 * Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 
@@ -25,11 +25,11 @@ fedkit-assemble is a fast, stable, and well tested frontend development workflow
 * Responsive IE8 support,
 * All frontend dependences use bower for easy management.
 
-Use fedkit as a base and tailor to your specific needs. Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/akuda/fedkit/issues) for more information about future enchancements and changes.
+Use fedkit as a base and tailor to your specific needs. Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit-assemble/issues) for more information about future enchancements and changes.
 
 ## Install
 
-Either, download the latest stable release from [GitHub](https://github.com/akuda/fedkit-assemble/releases) or clone the git repository on the master branch — `git clone https://github.com/akuda-assemble/fedkit.git`.
+Either, download the latest stable release from [GitHub](https://github.com/PJL101/fedkit-assemble/releases) or clone the git repository on the master branch — `git clone https://github.com/PJL101/fedkit-assemble.git`.
 
 Once this has been done:
 
