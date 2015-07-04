@@ -16,17 +16,13 @@
     <![endif]-->
   </head>
   <body>
-    <header class="site-header" role="banner">
-      {{>header}}
-    </header>
-    <main class="main">
+    {{>header}}
+    <main role="main">
       {{#block "body"}}
         {{>body}}
       {{/block}}
     </main>
-    <footer class="site-footer" role="contentinfo">
-      {{>footer}}
-    </footer>
+    {{>footer}}
 
     {{#block "gutter"}}{{/block}}
 
