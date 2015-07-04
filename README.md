@@ -4,7 +4,7 @@ Version: 0.4.8
 [![Build Status](https://travis-ci.org/PJL101/fedkit-assemble.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-assemble)
 [![devDependency Status](https://david-dm.org/PJL101/fedkit-assemble/dev-status.svg)](https://david-dm.org/PJL101/fedkit-assemble#info=devDependencies)
 
-* Author: Phil Lennon
+* Author: [Phil Lennon](http://iampjl.co.uk)
 * Source: [github.com/PJL101/fedkit-assemble](http://github.com/PJL101/fedkit-assemble)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 * Email: [enquiry@iampjl.co.uk](mailto:enquiry@iampjl.co.uk)
