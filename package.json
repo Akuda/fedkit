@@ -3,7 +3,7 @@
   "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass and Assemble.",
   "version": "0.4.7",
   "private": "true",
-  "author": "Phil Lennon <enquiry@akuda.co.uk>",
+  "author": "Phil Lennon <enquiry@iampjl.co.uk>",
   "homepage": "https://github.com/PJL101/fedkit-assemble",
   "license": "MIT",
   "repository": {
@@ -14,7 +14,8 @@
     "url": "https://github.com/PJL101/fedkit-assemble/issues"
   },
   "engines": {
-    "node": ">= 0.12"
+    "node": ">= 0.12",
+    "iojs": ">= 2"  
   },
   "scripts": {
     "test": "grunt prd"

@@ -3,9 +3,10 @@
 [![Build Status](https://travis-ci.org/PJL101/fedkit-assemble.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-assemble)
 [![devDependency Status](https://david-dm.org/PJL101/fedkit-assemble/dev-status.svg)](https://david-dm.org/PJL101/fedkit-assemble#info=devDependencies)
 
+* Author: Phil Lennon
 * Source: [github.com/PJL101/fedkit-assemble](http://github.com/PJL101/fedkit-assemble)
-* Author: [Phil Lennon](http://akuda.co.uk)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
+* Email: [enquiry@iampjl.co.uk](mailto:enquiry@iampjl.co.uk)
 
 -
 
