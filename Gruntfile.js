@@ -61,7 +61,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Assemble - Build HTML
+    // Assemble
     assemble: {
       options: {
         flatten: true,
@@ -74,6 +74,24 @@ module.exports = function(grunt) {
       site: {
         src: '<%= site.pages %>',
         dest: '<%= site.dist %>/'
+      }
+    },
+
+    // Csscomb
+    csscomb: {
+      partials: {
+        expand: true,
+        cwd: '<%= site.srcAssets %>/scss/partials/',
+        src: ['**/*.scss'],
+        dest: '<%= site.srcAssets %>/scss/partials/',
+        ext: '.scss'
+      },
+      modules: {
+        expand: true,
+        cwd: '<%= site.srcAssets %>/scss/modules/',
+        src: ['**/*.scss'],
+        dest: '<%= site.srcAssets %>/scss/modules/',
+        ext: '.scss'
       }
     },
 
@@ -111,6 +129,33 @@ module.exports = function(grunt) {
       }
     },
 
+    // Postcss functions
+    postcss: {
+      dev: {
+        options: {
+          map: true,
+          processors: [
+            require('postcss-will-change'), // Will change fallback
+            require('autoprefixer-core')(), // add vendor prefixes
+            require('css-mqpacker')(), // Combine media queries
+          ],
+        },
+        src: '<%= site.distAssets %>/css/**/*.css',
+      },
+      prd: {
+        options: {
+          map: false,
+          processors: [
+            require('postcss-will-change'), // Will change fallback
+            require('autoprefixer-core')(), // add vendor prefixes
+            require('css-mqpacker')(), // Combine media queries
+            require('cssnano')(), // minify stylesheet
+          ],
+        },
+        src: '<%= site.distAssets %>/css/**/*.css',
+      }
+    },
+
     // Change to rem units
     px_to_rem: {
       dev: {
@@ -121,8 +166,8 @@ module.exports = function(grunt) {
           dest: '<%= site.distAssets %>/css/'
         }],
         options: {
-          fallback: true,
-          fallback_existing_rem: true,
+          fallback: false,
+          fallback_existing_rem: false,
           map: true,
           ignore: ['content']
         }
@@ -135,51 +180,12 @@ module.exports = function(grunt) {
           dest: '<%= site.distAssets %>/css/'
         }],
         options: {
-          fallback: true,
-          fallback_existing_rem: true,
+          fallback: false,
+          fallback_existing_rem: false,
           map: false,
           ignore: ['content']
         }
       },
-    },
-
-    // Autoprefix CSS
-    autoprefixer: {
-      dev: {
-        options: {
-          map: true
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: '<%= site.distAssets %>/css/*.css',
-          dest: '<%= site.distAssets %>/css/'
-        }],
-      },
-      prd: {
-        options: {
-          map: false
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: '<%= site.distAssets %>/css/*.css',
-          dest: '<%= site.distAssets %>/css/'
-        }],
-      }
-    },
-
-    // Minify CSS
-    cssmin: {
-      prd: {
-        files: [{
-          expand: true,
-          cwd: '<%= site.distAssets %>/css',
-          src: ['*.css', '!*.min.css'],
-          dest: '<%= site.distAssets %>/css',
-          ext: '.css'
-        }]
-      }
     },
 
     // JSHint modules
@@ -197,6 +203,28 @@ module.exports = function(grunt) {
       ]
     },
 
+    // Modernizr
+    modernizr: {
+      dist: {
+        devFile: 'bower_components/modernizr/modernizr.js',
+        outputFile: '<%= site.srcAssets %>/js/vendor/bower/modernizr-custom.js',
+        extra: {
+          "shiv" : false,
+          "printshiv": false,
+          "load": false,
+          "mq": false,
+          "cssclasses": true
+        },
+        uglify: false,
+        files: {
+          src: [
+            '<%= site.srcAssets %>/js/modules/**/*.js',
+            '<%= site.distAssets %>/css/**/*.css'
+          ]
+        }
+      }
+    },
+
     // Uglify Javascript
     uglify: {
       dev: {
@@ -204,13 +232,12 @@ module.exports = function(grunt) {
           mangle: false,
           compress: false,
           preserveComments: 'all',
-          beautify: false,
+          beautify: true,
           sourceMap: true,
           sourceMapIncludeSources: true
         },
         files: {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
-          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
             '<%= site.srcAssets %>/js/global.js',
             '<%= site.srcAssets %>/js/vendor/**/*.js',
@@ -231,7 +258,6 @@ module.exports = function(grunt) {
         },
         files: {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
-          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
             '<%= site.srcAssets %>/js/global.js',
             '<%= site.srcAssets %>/js/vendor/**/*.js',
@@ -274,32 +300,42 @@ module.exports = function(grunt) {
       }
     },
 
-    // Watch for changes
-    watch: {
-      js: {
-        files: ['<%= site.srcAssets %>/js/**/*.js'],
-        tasks: ['jshint', 'uglify:dev'],
+    // Critical CSS
+    critical: {
+      dev: {
+        options: {
+          base: './',
+          css: [
+            '<%= site.distAssets %>/css/site.css'
+          ],
+          minify: false,
+          width: 1300,
+          height: 900
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.dist %>',
+          src: ['**/*.html'],
+          dest: '<%= site.dist %>'
+        }]
       },
-      scss: {
-        files:['<%= site.srcAssets %>/scss/**/*.scss'],
-        tasks:['sass:dev', 'px_to_rem:dev', 'autoprefixer:dev'],
-      },
-      img: {
-        files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
-        tasks: ['newer:imagemin'],
-      },
-      assemble: {
-        files: ['<%= site.templates %>/**/*', '_config.yml'],
-        tasks: ['assemble'],
-      },
-      fonts: {
-        files: ['<%= site.srcAssets %>/fonts/**/*'],
-        tasks: ['newer:copy:fonts'],
-      },
-      files: {
-        files: ['<%= site.src %>/files/**/*'],
-        tasks: ['newer:copy:files'],
-      },
+      prd: {
+        options: {
+          base: './',
+          css: [
+            '<%= site.distAssets %>/css/site.css'
+          ],
+          minify: true,
+          width: 1300,
+          height: 900
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.dist %>',
+          src: ['**/*.html'],
+          dest: '<%= site.dist %>'
+        }]
+      }
     },
 
     // Start server & watch
@@ -307,10 +343,10 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src: [
-            '<%= site.distAssets %>/css/*.css',
-            '<%= site.distAssets %>/js/*.js',
-            '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
-            '<%= site.dist %>/*.html'
+           '<%= site.distAssets %>/css/*.css',
+           '<%= site.distAssets %>/js/*.js',
+           '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
+           '<%= site.dist %>/*.html'
           ]
         },
         options: {
@@ -320,61 +356,94 @@ module.exports = function(grunt) {
       }
     },
 
+    // Watch for changes
+    watch: {
+      js: {
+        files: ['<%= site.srcAssets %>/js/**/*.js'],
+        tasks: ['jshint', 'uglify:dev'],
+      },
+      scss: {
+        files:['<%= site.srcAssets %>/scss/**/*.scss'],
+        tasks:['sass:dev', 'postcss:dev', 'px_to_rem:dev'],
+      },
+      img: {
+        files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
+        tasks: ['newer:imagemin'],
+      },
+      fonts: {
+        files: ['<%= site.srcAssets %>/fonts/**/*'],
+        tasks: ['newer:copy:fonts'],
+      },
+      files: {
+        files: ['<%= site.src %>/files/**/*'],
+        tasks: ['newer:copy:files'],
+      },
+      assemble: {
+        files: ['<%= site.templates %>/**/*', '_config.yml'],
+        tasks: ['assemble'],
+      },
+    },
+
     // Bump task
     // Use by running: 'grunt bump:patch', 'grunt bump:minor', 'grunt bump:major'
     bump: {
-        options: {
-          files: ['package.json', 'README.md'],
-          updateConfigs: [],
-          commit: true,
-          commitMessage: 'Release v%VERSION%',
-          commitFiles: ['package.json', 'README.md'],
-          createTag: true,
-          tagName: 'v%VERSION%',
-          tagMessage: 'Version %VERSION%',
-          push: true,
-          pushTo: 'origin',
-          gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
-          globalReplace: false,
-          prereleaseName: false,
-          regExp: false
-        }
-      },
+      options: {
+        files: ['package.json', 'README.md'],
+        updateConfigs: [],
+        commit: true,
+        commitMessage: 'Release v%VERSION%',
+        commitFiles: ['package.json', 'README.md'],
+        createTag: true,
+        tagName: 'v%VERSION%',
+        tagMessage: 'Version %VERSION%',
+        push: true,
+        pushTo: 'origin',
+        gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+        globalReplace: false,
+        prereleaseName: false,
+        regExp: false
+      }
+    }
   });
 
   // Tasks
   grunt.registerTask('dev', [
-    'clean:dist',
+    'clean',
     'shell:bower',
-    'newer:copy:bower',
+    'copy:bower',
     'assemble',
+    'csscomb',
     'sass:dev',
+    'postcss:dev',
     'px_to_rem:dev',
-    'autoprefixer:dev',
     'jshint',
+    'modernizr',
     'uglify:dev',
     'imagemin',
     'copy:fonts',
     'copy:files',
+    'critical:dev',
     'browserSync',
     'watch'
   ]);
 
   grunt.registerTask('prd', [
-    'clean:dist',
+    'clean',
     'shell:bower',
-    'newer:copy:bower',
+    'copy:bower',
     'assemble',
+    'csscomb',
     'sass:prd',
-    'autoprefixer:prd',
-    'cssmin',
+    'postcss:prd',
     'px_to_rem:prd',
     'jshint',
+    'modernizr',
     'uglify:prd',
     'imagemin',
-    'htmlmin:prd',
     'copy:fonts',
     'copy:files',
+    'critical:prd',
+    'htmlmin:prd',
   ]);
 
   grunt.registerTask('default', 'dev');

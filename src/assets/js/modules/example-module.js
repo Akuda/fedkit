@@ -14,6 +14,8 @@
     console.log('in example module: ' + privateVar);
     console.log('in example module: ' + exampleModule.publicVar);
 
+    console.log('Modernizr touch test example: ' + Modernizr.touch);
+
     privateFunction();
   };
 

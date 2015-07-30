@@ -37,17 +37,19 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 $base-font-size: 16px; // Recommended to not change this
 $site-container: 61.25rem; // 980px
 $site-gutter: 1.25rem; // 20px
-$grid-gutter: 0.25; // Quarter of column width
+$grid-gutter: .25; // Quarter of column width
 $mobile-column: 4;
 $tablet-column: 12;
 $grid-debug: show;
 
 // Colours
+$brand-a: rgba(50, 120, 50, 1);
+$brand-b: rgba(50, 120, 50, .25);
 
 // Fonts
-$font-primary: "georgia", serif;
+$font-primary: 'georgia', serif;
 $font-primary-weight: 400;
-$font-headline: "verdana", sans-serif;
+$font-headline: 'verdana', sans-serif;
 $font-headline-weight: 700;
 
 // Default Grid Options
@@ -59,7 +61,7 @@ $grid-mobile: (
   global-box-sizing: border-box,
   debug: (
     image: $grid-debug,
-    color: rgba(#66f, .25),
+    color: rgba(#6666ff, .25),
     output: background,
   ),
   use-custom: (
@@ -70,7 +72,6 @@ $grid-mobile: (
     rem: false,
   )
 );
-
 $grid-tablet: (
   columns: $tablet-column,
   gutters: $grid-gutter,
@@ -78,7 +79,7 @@ $grid-tablet: (
   container: $site-container,
   debug: (
     image: $grid-debug,
-    color: rgba(#66f, .25),
+    color: rgba(#6666ff, .25),
     output: background,
   ),
   use-custom: (
@@ -89,34 +90,3 @@ $grid-tablet: (
     rem: false,
   )
 );
-
-/* For quick reference, the susy defaults are:
-
-$susy: (
-  flow: ltr,
-  math: fluid,
-  output: float,
-  gutter-position: after,
-  container: auto,
-  container-position: center,
-  columns: 4,
-  gutters: .25,
-  column-width: false,
-  global-box-sizing: content-box,
-  last-flow: to,
-  debug: (
-    image: hide,
-    color: rgba(#66f, .25),
-    output: background,
-    toggle: top right,
-  ),
-  use-custom: (
-    background-image: true,
-    background-options: false,
-    box-sizing: true,
-    clearfix: false,
-    rem: true,
-  )
-);
-
-*/

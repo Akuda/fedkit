@@ -9,12 +9,14 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# fedkit #
+# fedkit-assemble #
 ######################
 *node_modules/
 *bower_components/
 *bower_filtered/
 *_dist/
+src/assets/scss/vendor/bower
+src/assets/js/vendor/bower
 npm-debug.log
 
 # Development #
@@ -24,5 +26,3 @@ npm-debug.log
 
 # Project Specific #
 ######################
-src/assets/scss/vendor/bower
-src/assets/js/vendor/bower

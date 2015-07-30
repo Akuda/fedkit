@@ -1,8 +1,8 @@
 {
   "name": "fedkit-assemble",
-  "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass and Assemble.",
+  "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass & Assemble.",
   "private": "true",
-  "homepage": "https://github.com/PJL101/fedkit-assemble/",
+  "homepage": "https://github.com/PJL101/fedkit-assemble",
   "authors": [
     "Phil Lennon <enquiry@iampjl.co.uk>"
   ],
@@ -22,7 +22,10 @@
     "modernizr": "~2.8.3",
     "sass-mq": "~3.1.2",
     "normalize-scss": "~3.0.3",
-    "jquery": "1.x"
+    "jquery": "2.x"
+  },
+  "devDependencies": {
+    "tota11y": "~0.0.6"
   },
   "install": {
     "base": "bower_filtered",
@@ -36,9 +39,18 @@
       "woff": "fonts/{name}",
       "woff2": "fonts/{name}"
     },
+    "ignore": [
+      "modernizr"
+    ],
     "sources": {
-      "modernizr": "bower_components/modernizr/modernizr.js",
-      "susy": "bower_components/susy/sass/**"
+      "susy": "bower_components/susy/sass/**",
+      "jquery": {
+        "mapping": [
+          {
+            "bower_components/jquery/dist/jquery.js": "../_jquery.js"
+          }
+        ]
+      }
     }
   }
 }

@@ -7,7 +7,7 @@
 
   &__sidebar {
     @include mq($from: tablet) {
-     @include span(3 of $tablet-column);
+      @include span(3 of $tablet-column);
     }
   }
 }
