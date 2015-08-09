@@ -2,22 +2,22 @@
 ######################
 .DS_Store
 .DS_Store?
-._*
 .Spotlight-V100
 .Trashes
-Icon?
 ehthumbs.db
 Thumbs.db
 
 # fedkit-assemble #
 ######################
-*node_modules/
-*bower_components/
-*bower_filtered/
-*_dist/
+*node_modules
+npm-debug.log
+*bower_components
+*bower_filtered
+*_dist
 src/assets/scss/vendor/bower
 src/assets/js/vendor/bower
-npm-debug.log
+_grunticon
+_tmp-icon
 
 # Development #
 ######################

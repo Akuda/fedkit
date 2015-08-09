@@ -23,6 +23,10 @@ module.exports = function(grunt) {
         'bower_filtered',
         '<%= site.srcAssets %>/scss/vendor/bower',
         '<%= site.srcAssets %>/js/vendor/bower',
+      ],
+      grunticon: [
+        '_grunticon',
+        '_tmp-icon'
       ]
     },
 
@@ -47,11 +51,27 @@ module.exports = function(grunt) {
       files: {
         files: [{
           expand: true,
-          cwd: '<%= site.src %>/files/',
+          cwd: '<%= site.srcAssets %>/files/',
           src: ['**/*'],
           dest: '<%= site.dist %>/'
         }]
       },
+      grunticon: {
+        files: [{
+          expand: true,
+          cwd: '_grunticon/',
+          src: ['**/*', '!*.js', '!*.html'],
+          dest: '<%= site.dist %>/'
+        }]
+    },
+      grunticonjs: {
+        files: [{
+          expand: true,
+          cwd: '_grunticon/',
+          src: ['*.js'],
+          dest: '<%= site.srcAssets %>/js/head/'
+        }]
+      }
     },
 
     // Run shell tasks
@@ -188,6 +208,53 @@ module.exports = function(grunt) {
       },
     },
 
+    // Image minification
+    imagemin: {
+      img: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{
+
+          }]
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.srcAssets %>/img/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: '<%= site.distAssets %>/img/'
+        }]
+      },
+      grunticon: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{
+
+          }]
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.srcAssets %>/icons/',
+          src: ['**/*.{png,svg}'],
+          dest: '_tmp-icon/'
+        }]
+      }
+    },
+
+    // Grunticon
+    grunticon: {
+      prd: {
+        files: [{
+            expand: true,
+            cwd: '_tmp-icon/',
+            src: ['**/*.{png,svg}'],
+            dest: "_grunticon"
+        }],
+        options: {
+          pngfolder: 'assets/img/icon-fallback/'
+        }
+      }
+    },
+
     // JSHint modules
     jshint: {
       options: {
@@ -218,7 +285,7 @@ module.exports = function(grunt) {
         uglify: false,
         files: {
           src: [
-            '<%= site.srcAssets %>/js/modules/**/*.js',
+            '<%= site.srcAssets %>/js/**/*.js',
             '<%= site.distAssets %>/css/**/*.css'
           ]
         }
@@ -267,21 +334,6 @@ module.exports = function(grunt) {
           ]
         }
       },
-    },
-
-    // Image minification
-    imagemin: {
-      dynamic: {
-        options: {
-
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= site.srcAssets %>/img/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: '<%= site.distAssets %>/img/'
-        }]
-      }
     },
 
     // HTML minification
@@ -343,10 +395,8 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src: [
-           '<%= site.distAssets %>/css/*.css',
-           '<%= site.distAssets %>/js/*.js',
-           '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
-           '<%= site.dist %>/*.html'
+           '<%= site.distAssets %>/**/*',
+           '<%= site.dist %>/**/*.html'
           ]
         },
         options: {
@@ -364,18 +414,22 @@ module.exports = function(grunt) {
       },
       scss: {
         files:['<%= site.srcAssets %>/scss/**/*.scss'],
-        tasks:['sass:dev', 'postcss:dev', 'px_to_rem:dev'],
+        tasks:['csscomb', 'sass:dev', 'postcss:dev', 'px_to_rem:dev', 'critical:dev'],
       },
       img: {
-        files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
-        tasks: ['newer:imagemin'],
+        files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif,svg}'],
+        tasks: ['newer:imagemin:img'],
+      },
+      grunticon: {
+        files: ['<%= site.srcAssets %>/icons/**/*.{png,svg}'],
+        tasks: ['imagemin:grunticon', 'grunticon'],
       },
       fonts: {
         files: ['<%= site.srcAssets %>/fonts/**/*'],
         tasks: ['newer:copy:fonts'],
       },
       files: {
-        files: ['<%= site.src %>/files/**/*'],
+        files: ['<%= site.srcAssets %>/files/**/*'],
         tasks: ['newer:copy:files'],
       },
       assemble: {
@@ -403,7 +457,7 @@ module.exports = function(grunt) {
         prereleaseName: false,
         regExp: false
       }
-    }
+    },
   });
 
   // Tasks
@@ -416,15 +470,18 @@ module.exports = function(grunt) {
     'sass:dev',
     'postcss:dev',
     'px_to_rem:dev',
+    'imagemin',
+    'grunticon:prd',
+    'copy:grunticon',
+    'copy:grunticonjs',
     'jshint',
     'modernizr',
     'uglify:dev',
-    'imagemin',
     'copy:fonts',
     'copy:files',
     'critical:dev',
-    'browserSync',
-    'watch'
+    'browserSync',    
+    'watch',
   ]);
 
   grunt.registerTask('prd', [
@@ -436,10 +493,13 @@ module.exports = function(grunt) {
     'sass:prd',
     'postcss:prd',
     'px_to_rem:prd',
+    'imagemin',
+    'grunticon:prd',
+    'copy:grunticon',
+    'copy:grunticonjs',
     'jshint',
     'modernizr',
     'uglify:prd',
-    'imagemin',
     'copy:fonts',
     'copy:files',
     'critical:prd',

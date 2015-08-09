@@ -12,7 +12,7 @@ Version: 0.5.0
 
 -
 
-fedkit-assemble is a fast, stable, and well tested frontend development workflow, containing:
+fedkit-assemble is a fast, stable, well tested and opinionated frontend development workflow, containing:
 
 * Grunt 0.4,
 * Assemble 0.4,
@@ -24,6 +24,7 @@ fedkit-assemble is a fast, stable, and well tested frontend development workflow
 * CSS PX to REM,
 * Critical CSS,
 * Imagemin,
+* Grunticon,
 * JSHint,
 * Automatic custom Modernizr build,
 * HTMLmin,
@@ -35,7 +36,7 @@ Use fedkit-assemble as a base and tailor to your specific needs. Comments, sugge
 
 There are several variants of fedkit either in development or available now. They have the base frontend workflow with a site generator included. The current variants are:
 
-* [fedkit](https://github.com/PJL101/fedkit) - The original, non static site generator version,
+* [fedkit](https://github.com/PJL101/fedkit) - The base, non static site generator version,
 * [fedkit-hugo](https://github.com/PJL101/fedkit-hugo) - Designed for a static website, with or without a blog.
 
 ## Install
@@ -60,5 +61,5 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/fedki
 
 ## Known Issues
 
-* Documentation is in progress,
-* No Windows testing.
+* io.js v3 is unsupported due to node-sass. See [https://github.com/sass/node-sass/issues/1053](https://github.com/sass/node-sass/issues/1053),
+* Documentation is TBA.
