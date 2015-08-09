@@ -63,14 +63,6 @@ module.exports = function(grunt) {
           src: ['**/*', '!*.js', '!*.html'],
           dest: '<%= site.dist %>/'
         }]
-    },
-      grunticonjs: {
-        files: [{
-          expand: true,
-          cwd: '_grunticon/',
-          src: ['*.js'],
-          dest: '<%= site.srcAssets %>/js/head/'
-        }]
       }
     },
 
@@ -422,7 +414,7 @@ module.exports = function(grunt) {
       },
       grunticon: {
         files: ['<%= site.srcAssets %>/icons/**/*.{png,svg}'],
-        tasks: ['imagemin:grunticon', 'grunticon'],
+        tasks: ['imagemin:grunticon', 'grunticon', 'copy:grunticon'],
       },
       fonts: {
         files: ['<%= site.srcAssets %>/fonts/**/*'],
@@ -473,14 +465,13 @@ module.exports = function(grunt) {
     'imagemin',
     'grunticon:prd',
     'copy:grunticon',
-    'copy:grunticonjs',
     'jshint',
     'modernizr',
     'uglify:dev',
     'copy:fonts',
     'copy:files',
     'critical:dev',
-    'browserSync',    
+    'browserSync',
     'watch',
   ]);
 
@@ -496,7 +487,6 @@ module.exports = function(grunt) {
     'imagemin',
     'grunticon:prd',
     'copy:grunticon',
-    'copy:grunticonjs',
     'jshint',
     'modernizr',
     'uglify:prd',
