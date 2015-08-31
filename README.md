@@ -1,5 +1,5 @@
 # fedkit-assemble
-Version: 0.6.1
+Version: 0.6.2
 
 [![Build Status](https://travis-ci.org/PJL101/fedkit-assemble.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-assemble)
 [![devDependency Status](https://david-dm.org/PJL101/fedkit-assemble/dev-status.svg)](https://david-dm.org/PJL101/fedkit-assemble
