@@ -1,9 +1,9 @@
 language: node_js
 
-# test on relevant node versions
+# Test on supported node versions
 node_js:
   - "0.12"
-  - "iojs-v2"
+  - "iojs"
 
 before_script:
   - npm install grunt-cli -g
