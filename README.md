@@ -1,5 +1,5 @@
 # fedkit-assemble-legacy
-Version: 0.6.2
+Version: 1.0.0
 
 [![Build Status](https://travis-ci.org/PJL101/fedkit-assemble-legacy.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-assemble-legacy)
 [![devDependency Status](https://david-dm.org/PJL101/fedkit-assemble-legacy/dev-status.svg)](https://david-dm.org/PJL101/fedkit-assemble-legacy

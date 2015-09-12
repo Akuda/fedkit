@@ -1,7 +1,7 @@
 {
   "name": "fedkit-assemble-legacy",
   "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass & Assemble.",
-  "version": "0.6.2",
+  "version": "1.0.0",
   "private": "true",
   "author": "Phil Lennon <enquiry@iampjl.co.uk>",
   "homepage": "https://github.com/PJL101/fedkit-assemble-legacy",
