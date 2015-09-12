@@ -2,8 +2,7 @@ language: node_js
 
 # Test on supported node versions
 node_js:
-  - "0.12"
-  - "iojs"
+  - "stable"
 
 before_script:
   - npm install grunt-cli -g
