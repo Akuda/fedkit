@@ -1,21 +1,20 @@
 {
-  "name": "fedkit-assemble",
+  "name": "fedkit-assemble-legacy",
   "description": "A fast and stable Front End Development workflow. Built with Grunt, Libsass & Assemble.",
   "version": "0.6.2",
   "private": "true",
   "author": "Phil Lennon <enquiry@iampjl.co.uk>",
-  "homepage": "https://github.com/PJL101/fedkit-assemble",
+  "homepage": "https://github.com/PJL101/fedkit-assemble-legacy",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PJL101/fedkit-assemble.git"
+    "url": "https://github.com/PJL101/fedkit-assemble-legacy.git"
   },
   "bugs": {
-    "url": "https://github.com/PJL101/fedkit-assemble/issues"
+    "url": "https://github.com/PJL101/fedkit-assemble-legacy/issues"
   },
   "engines": {
-    "node": ">= 0.12",
-    "iojs": ">= 3"
+    "node": ">= 0.12"
   },
   "scripts": {
     "test": "grunt prd"
